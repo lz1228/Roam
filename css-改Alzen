@@ -1,84 +1,279 @@
-@import url('https://azlen.github.io/roam-themes/core.css');
-
+@import url('https://azlen.github.io/roam-themes/yggdrasil.css');
 /* Reference block heading */
 a {
-color: #3F51B5 !important;
-text-decoration: underline;
+    color: #131414!important;
+
 }
 a:hover {
-color: #C10626 !important;
+    color: #C10626 !important;
+}
+*[style*="background-color: white"] {
+    background-color: #fff !important;
+}
+
+.bp3-popover .bp3-menu, .bp3-popover .bp3-popover-content {
+    pointer-events: auto;
+    background-color: #ffffff !important;
 }
 
 /* Page link */
 .rm-page-ref-link-color {
-color: #BC0707 !important;
-font-weight: 600;
+    color: #014C45 !important;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 1px 5px 1px 5px;
 }
 
 /* Hashtags */
 .rm-page-ref-tag {
-color: #392B1E9e !important;
-font-weight: 400;
-background-color: #e8e3d3c2;
-border-radius: 10px;
-padding: 1px 5px 2px;
+    color: #F8F8F8 !important;
+    font-weight: 500;
+    background-color: #84848787;
+    border-radius: 5px;
+    padding: 1px 5px 2px;
+}
+
+
+:root {	
+    --page-width:800px !important;
+    --page-order: row-reverse; /* new pages show up to the right */
+    /*--page-order: row; /* new pages show up to the left */
+    
+    --header-font: "Source Sans Pro", "Inter", sans-serif;	
+    --body-font: "微软雅黑", "Inter", sans-serif;	
+    --bg-color: #EEEEEE;	
+    --page-color: #FFFFFFA5;	
+    --text-color: #000000;	
+    --icon-color: #5c7080;
+    --bullet-color: rgba(0, 0, 0, 0.2);	
+
+    	
+    --page-shadow: 0px 8px 14px rgba(0, 0, 0, 0.05);	
+    	
+    --color-primary: 73, 197, 91;	
+    --color-primary-contrast: #FFFFFF;	
+    --color-secondary: 147, 100, 235;
+    --color-secondary-contrast: #FFFFFF;
+     --font-size:15px !important;
+}
+
+
+/* 高亮、加粗、斜体、alias外链样式*/
+.roam-highlight {
+	border-bottom:1.3px wavy;
+	text-shadow: 0px 1px 2px #9A9797;
+	color: #CA040B;
+	font-weight:500 !important;
+	background-color:transparent;
+}
+b, strong {
+    color: rgb(22,70,238) !important;
+    font-weight:bolder!important;
+    text-shadow: 0px 1px 5px #c6c0c0;
+	font-size:15px;
+}
+em {
+	border-bottom:1.3px wavy;
+	color: #04A29E;
+    font-weight:bold;
+}
+.rm-alias-block, .rm-alias-block:hover {
+    color: #464748!important;
+    font-weight:normal;
+	border-bottom:1.3px dashed;
+}
+.rm-alias-external, .rm-alias-external:hover {
+    color: #141515!important;
+    font-weight:normal;
+	border-bottom:1.3px solid;
+}
+/* 块引用 */
+.rm-block-ref::before {
+  content: '⚓';
+  display: inline-block;
+  color: #159EF8 !important;
+  margin-right: 5px;
+  top: -2px;
+  position: relative;
+}
+.rm-block-ref {
+  display: inline-flex;
+  border-bottom: none;
+  font-size: 1em;
+   background-color: #CCCCD04F;
+  color: #424444 !important;
+  background-color:;
+}
+.rm-block-ref:hover {
+  cursor: pointer;
+}
+/* 标题样式 */
+.rm-level1 div, .rm-level1 textarea {
+    font-size: 18px !important;
+    color:#101010!important;
+    line-height: 1.5 !important;
+  text-shadow: 0px 1px 1px #7F7D7D;
+
+}
+.rm-level2 div, .rm-level2 textarea {
+      font-size: 17px !important;
+    line-height: 1.5 !important;
+  color:#161617!important;
+     font-weight: 900 !important;
+}
+
+/* 标签设计 */
+span.rm-page-ref[data-tag="todo"] {
+    color: #121313 !important;
+   background-color:#F44336AF !important;
+}
+span.rm-page-ref[data-tag="cont"] {
+    color: #121313 !important;
+   background-color:#CDDC39AF !important;
+}
+span.rm-page-ref[data-tag="cont"]:after {
+    content: " 📌"
+}
+
+.rm-page-ref-link-color {
+    font-weight: 600;
+    color: rgb(1, 76, 69) !important;
+    border-radius: 5px;
+    padding: 1px 1px 1px 1px;
 }
 
 /* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');	
 
-:root {
---page-width:800px
---page-order: row-reverse; /* new pages show up to the right /
-/--page-order: row; /* new pages show up to the left */
-
---header-font: "Source Sans Pro", "Inter", sans-serif;	
---body-font: "Source Sans Pro", "Inter", sans-serif;	
-	
---bg-color: #EEEEEE;	
---page-color: rgba(255, 255, 255, 0.95);	
-	
---text-color: #000000;	
---icon-color: #5c7080;
---bullet-color: rgba(0, 0, 0, 0.2);	
-	
---page-shadow: 0px 8px 14px rgba(0, 0, 0, 0.05);	
-	
---color-primary: 73, 197, 91;	
---color-primary-contrast: #FFFFFF;	
---color-secondary: 147, 100, 235;
-
---color-secondary-contrast: #FFFFFF;	
-}
 
 /* CHANGE COLOURS IN CANVAS */
-canvas[data-id="layer2-node"] {
-filter: invert(1) hue-rotate(110deg) saturate(2.5);
+canvas[data-id="layer2-node"] {	
+    filter: invert(1) hue-rotate(110deg) saturate(2.5);	
 }
-:root {
---page-width:780px
+/* KANBAN */
+.kanban-board {
+    background-color: transparent;
+    padding: 0px;
+    max-width: 750px;
 }
-
-.roam-highlight {
-background-color: #EAE47D!important;
-}
-
-.rm-block-ref::before {
-content: '↖';
-display: inline-block;
-color: #4d94ff;
-margin-right: 5px;
-top: -2px;
-position: relative;
-}
-.rm-block-ref {
-display: inline-flex;
-border-bottom: none;
-font-size: 1em;
-color: #335C8A !important;
-background-color: #F3F6FB7A4F;
+.kanban-title {
+    background: #C5BFBF77;
+    color: #310202!important;
+    font-weight: bold;
+    padding: 0px !important;
+    max-height: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
 }
 
-.rm-block-ref:hover {
-cursor: pointer;
+#roam-right-sidebar-content > * {
+    margin: 0px 0px 0 10px !important;
+    overflow-x: hidden;
+    /*overflow-y: auto !important;*/
+    max-height: 100vh;
+    padding: 50px 0px 20px 0px;
+    
+    /* pesky bottom border/outline in chrome won't go away! */
+    /* this does not fix it */
+    border: none !important;
+    outline: none !important;
+}
+#roam-right-sidebar-content > * {
+    margin: 0px 0px 0 10px !important;
+    overflow-x: hidden;
+    /* overflow-y: auto !important; */
+    max-height: 100vh;
+    padding: 50px 0px 70px 0px;
+    border: none !important;
+    outline: none !important;
+}
+/* BUTTON */
+.block-bullet-view .bp3-button:not([class*="bp3-icon"]) {
+    background: transparent !important;
+    color: rgb(var(--color-primary)) !important;
+    line-height: 2em;
+    font-weight: 600;
+    border-radius: 2em !important;
+    border: 0px solid rgba(var(--color-primary), 0.5) !important;
+    box-shadow: none !important;
+}
+.block-bullet-view .bp3-button:hover {
+    background: rgba(var(--color-primary), 0.2) !important;
+}
+.bp3-button.bp3-small, .bp3-small .bp3-button {
+    min-height: 14px;
+    min-width: 4px;
+    padding: 0 7px;
+}
+
+.block-bullet-view .bp3-button:not([class*="bp3-icon"]) {
+    padding: 1px 3px 1px 3px!important;
+}
+
+
+/* 主页面padding */
+.roam-article > div {
+    padding: 20px 10px 30px 30px;
+}
+
+.rm-block-text {
+    max-width: 720px!important;
+}
+
+/* 侧边栏padding */
+#roam-right-sidebar-content > div > div:not(.flex-h-box) {
+    padding: 0px 10px 0px 20px !important;
+}
+#roam-right-sidebar-content > * > div:last-child:not(:first-child) {
+    border-radius: 0px 0px 10px 10px;
+    padding-bottom: 30px !important;
+    width: var(--page-width);
+}
+.roam-sidebar-container > .roam-sidebar-content::before {
+    content: "";
+    position: absolute;
+    top: -70px; right: -68px;
+    width: 650px;
+    height: 95.5vh;
+    background: var(--bg-color) ;
+    opacity: 0.1;
+    z-index: -1;
+    margin-top:20px;
+    margin-bottom:100px;
+      border-radius: 50px;
+   background-image:url(https://lucius-images.oss-cn-hangzhou.aliyuncs.com/%E5%BC%A0%E5%AD%90%E6%9E%AB001?OSSAccessKeyId=LTAI4Ff9fbqXxbXtD8zmgWaN&Expires=1954197114&Signature=CkmlE3L89v4lBVNge%2FX85EVB9go%3D)!important;
+}
+
+
+.controls .simple-bullet-outer {
+    display: flex;
+    height: 13px;
+    width: 13px;
+    margin-top: 3px;
+
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.roam-block {
+    text-align: justify;
+    padding-right:20px;
+}
+.rm-block-input {
+    text-align: justify;
+    padding-right: 20px;
+}
+/* 侧边栏一些杂七杂八的 */
+.starred-pages-wrapper > div:first-child {
+    margin-top: 9px !important;
+    background-color: rgba(0,0,0,0) !important;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row:hover {
+  background-color: #CFD0D2;
+        border-radius: 10px;
 }
